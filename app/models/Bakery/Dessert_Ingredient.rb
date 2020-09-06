@@ -1,12 +1,12 @@
-class Dessert_Ingredient
+class DessertIngredient
 
-    attr_accessor :desserts, :ingredients
+    attr_accessor :dessert, :ingredient
 
     @@all = []
 
-    def initialize (desserts, ingredients)
-        @desserts = desserts
-        @ingredients = ingredients
+    def initialize(dessert, ingredient)
+        @dessert = dessert
+        @ingredient = ingredient
         @@all << self
     end
 

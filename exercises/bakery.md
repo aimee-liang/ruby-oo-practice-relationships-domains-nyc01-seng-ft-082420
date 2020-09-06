@@ -20,12 +20,12 @@ Create the necessary methods to connect these classes.
   - should return an array of ingredients for the bakery's desserts -->
 <!-- - #desserts
   - should return an array of desserts the bakery makes -->
-- #average_calories
-  - should return a number totaling the average number of calories for the desserts sold at this bakery
+<!-- - #average_calories
+  - should return a number totaling the average number of calories for the desserts sold at this bakery -->
 <!-- - .all
   - should return an array of all bakeries -->
-- #shopping_list
-  - should return a string of names for ingredients for the bakery
+<!-- - #shopping_list
+  - should return a string of names for ingredients for the bakery -->
 
 #### Desserts
 
@@ -33,17 +33,17 @@ Create the necessary methods to connect these classes.
   - should return an array of ingredients for the dessert -->
 <!-- - #bakery
   - should return the bakery object for the dessert -->
-- #calories
-  - should return a number totaling all the calories for all the ingredients included in that dessert
+<!-- - #calories
+  - should return a number totaling all the calories for all the ingredients included in that dessert -->
 <!-- - .all
   - should return an array of all desserts -->
 
 #### Ingredients
 
-- #dessert
-  - should return a dessert object for that ingredient
-- #bakery
-  - should return the bakery object for the bakery that uses that ingredient
+<!-- - #dessert
+  - should return a dessert object for that ingredient -->
+<!-- - #bakery
+  - should return the bakery object for the bakery that uses that ingredient -->
 <!-- - .all
   - should return an array of all ingredients -->
 - .find_all_by_name(ingredient)

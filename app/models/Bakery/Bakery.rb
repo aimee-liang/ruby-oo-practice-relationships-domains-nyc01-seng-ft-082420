@@ -12,20 +12,21 @@ class Bakery
         @@all
     end
 
-    # def ingredients
-    #     # go to bakery desserts and create an array of ingredients
-    # end
+    def desserts
+        Dessert.all.select{|dessert| dessert.bakery == self}
+    end
 
-    # def desserts
-    # end
+    def ingredients
+        self.desserts.map{|dessert| dessert.ingredient}
+    end
 
     def average_calories
-        # return total average num of calories for desserts sold at this bakery
+        self.ingredients.sum{|ingredient| ingredient.calorie_count} / self.ingredients.length
     end
 
     def shopping_list
-        # return string of names for ingredients at bakery
-        # use split and to string methods?
+        # map through ingredients method and create a new array for name, then join
+        self.ingredients.map{|ingredient| ingredient.name}.join(", ")
     end
 
 end
