@@ -1,6 +1,6 @@
 class Pledge
 
-    # attrs
+    # attr_
     @@all =[]
 
     def initialize

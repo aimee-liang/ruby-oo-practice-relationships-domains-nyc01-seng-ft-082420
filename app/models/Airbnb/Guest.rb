@@ -8,13 +8,13 @@ class Guest
         @@all << self
     end
 
-    def listings
-        Trip.all.filter{|trip| trip.guest == self}.map{|trip| trip.listing}
-    end
-
     def trips
         Trip.all.select {|trip| trip.guest == self}
-        # self.listings.map{|trip| trip.listing}
+    end
+
+    def listings
+        # Trip.all.filter{|trip| trip.guest == self}.map{|trip| trip.listing}
+        self.trips.map{|trip| trip.listing}
     end
 
     def trip_count

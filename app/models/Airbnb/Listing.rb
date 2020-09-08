@@ -8,15 +8,15 @@ class Listing
         @@all << self
     end
 
-    # returns an array of all guests who have stayed at a listing
-    def guests
-        Trip.all.filter {|trip| trip.listing == self}.select{|trip| trip.guest}
-        # Trip.all.filter{|trip| trip.listing == self}.map{|trip| trip.guest}
-        # self.trips.map{|trip| trip.guest}
+    def trips 
+        Trip.all.select {|trip| trip.listing == self}
     end
 
-    def trips
-        Trip.all.select {|trip| trip.listing == self}
+    # returns an array of all guests who have stayed at a listing
+    def guests
+        # Trip.all.filter {|trip| trip.listing == self}.select{|trip| trip.guest}
+        # Trip.all.filter{|trip| trip.listing == self}.map{|trip| trip.guest}
+        self.trips.map{|trip| trip.guest}
     end
 
     def trip_count
