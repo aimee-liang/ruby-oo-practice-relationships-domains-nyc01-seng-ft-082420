@@ -25,7 +25,6 @@ class Bakery
     end
 
     def shopping_list
-        # map through ingredients method and create a new array for name, then join
         self.ingredients.map{|ingredient| ingredient.name}.join(", ")
     end
 

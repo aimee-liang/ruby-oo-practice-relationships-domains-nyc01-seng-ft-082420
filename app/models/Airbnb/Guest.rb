@@ -14,6 +14,7 @@ class Guest
 
     def trips
         Trip.all.select {|trip| trip.guest == self}
+        # self.listings.map{|trip| trip.listing}
     end
 
     def trip_count
@@ -26,7 +27,6 @@ class Guest
 
     def self.pro_traveller 
         self.all.filter {|self| self.trip_count > 1}
-        end
     end
 
     def self.find_all_by_name(name)
